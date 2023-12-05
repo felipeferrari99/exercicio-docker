@@ -6,12 +6,16 @@ services:
       - dbdata:/var/lib/mysql
     networks:
       - default-network
+    environment:
+      - MYSQL_DATABASE=
+      - MYSQL_ROOT_PASSWORD=senha123
   phpmyadmin:
     image: phpmyadmin
     restart: always
     ports:
       - 8080:80
     environment:
+      - PMA_PASSWORD=MYSQL_ROOT_PASSWORD
       - PMA_ARBITRARY=1
     networks:
       - default-network
@@ -21,3 +25,4 @@ volumes:
 networks:
   default-network:
     name: default-network
+    driver: bridge
