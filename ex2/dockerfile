@@ -7,7 +7,7 @@ VOLUME /var/lib/mysql
 FROM phpmyadmin/phpmyadmin
 
 ENV PMA_ARBITRARY=1
-ENV PMA_HOST=ex2_mysql
+ENV PMA_HOST=ex2-network
 ENV MYSQL_PASSWORD=123
 
 EXPOSE 80
