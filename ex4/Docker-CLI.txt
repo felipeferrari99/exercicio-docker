@@ -1,0 +1,5 @@
+docker network create ex4-network
+
+docker run -d --name ex4_mysql --network ex4-network -e MYSQL_ROOT_PASSWORD=123 -v /var/lib/mysql mysql:5.7
+
+docker run -d --name ex4_phpmyadmin --network ex4-network -e PMA_ARBITRARY=1 -p 8080:80 phpmyadmin/phpmyadmin
