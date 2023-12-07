@@ -1,0 +1,7 @@
+FROM phpmyadmin/phpmyadmin
+
+ENV PMA_ARBITRARY=1
+ENV PMA_HOST=ex3-network
+ENV MYSQL_PASSWORD=123
+
+EXPOSE 80
